@@ -12,6 +12,12 @@
       href="./assets/images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Browser extensions manager UI</title>
   </head>
   <body>
@@ -42,7 +48,31 @@
           <button class="nav-item">Inactive</button>
         </nav>
       </div>
-      <section class="card-items"></section>
+      <section class="card-items">
+        <div class="card-item">
+          <div class="image-details-container">
+            <div class="image-container">
+              <img
+                src="assets/images/logo-devlens.svg"
+                alt="search bar and magnifying glass icon combos."
+              />
+            </div>
+            <div class="details-container">
+              <h2>DevLens</h2>
+              <p>
+                Quickly inspect page layouts and visualize element boundaries
+              </p>
+            </div>
+          </div>
+          <div class="remove-toggle-container">
+            <button type="button" class="remove-button">Remove</button>
+            <label class="toggle">
+              <input type="checkbox" />
+              <span class="toggle-track"></span>
+            </label>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="scripts/main.js"></script>
   </body>
