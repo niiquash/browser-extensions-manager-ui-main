@@ -47,7 +47,7 @@ header {
   cursor: pointer;
 }
 
-/* Main */
+/* Main - Heading and links */
 main {
   margin-top: 40px;
 }
@@ -84,10 +84,109 @@ main {
   font-weight: 500;
   line-height: 140%;
   letter-spacing: -0.3px;
-  box-shadow: 0 4px 4px 0 #000 25%;
+  box-shadow: 0 4px 4px #000 25%;
 }
 
-.nav-item:focus {
+.nav-item.focus {
   background-color: #c7231a;
   color: #fbfdfe;
+}
+
+/* Main cards */
+.card-items {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 40px;
+}
+
+.card-item {
+  border-radius: 20px;
+  padding: 20px;
+  background-color: #fbfdfe;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.image-details-container {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.details-container h2 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.2px;
+}
+
+.details-container p {
+  margin-top: 8px;
+  line-height: 140%;
+  letter-spacing: -0.5px;
+  color: #535868;
+}
+
+.remove-toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.remove-button {
+  border: 1px solid #c6c6c6;
+  background-color: transparent;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: -0.5px;
+  cursor: pointer;
+}
+
+/* Toggle button */
+.toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toggle input {
+  display: none;
+}
+
+/* track */
+.toggle-track {
+  position: relative;
+  width: 36px;
+  height: 20px;
+  background-color: #c6c6c6;
+  border-radius: 28px;
+  transition: background-color 0.08s ease;
+}
+
+.toggle-track::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  background-color: #fbfdfe;
+  border-radius: 50%;
+  transition: transform 0.08s ease;
+  box-shadow: 0 1px 3px #0a0d12 15%;
+}
+
+/* Checked toggle states */
+.toggle input:checked + .toggle-track {
+  background-color: #c7231a;
+}
+
+.toggle input:checked + .toggle-track::before {
+  transform: translateX(16px);
 }
