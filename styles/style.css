@@ -46,3 +46,48 @@ header {
   border-radius: 12px;
   cursor: pointer;
 }
+
+/* Main */
+main {
+  margin-top: 40px;
+}
+
+.heading-nav-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.heading {
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: #091540;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-item {
+  text-decoration: none;
+  display: block;
+  padding: 8px 20px 10px 20px;
+  border: none;
+  border-radius: 999px;
+  background-color: #fbfdfe;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: -0.3px;
+  box-shadow: 0 4px 4px 0 #000 25%;
+}
+
+.nav-item:focus {
+  background-color: #c7231a;
+  color: #fbfdfe;
+}
