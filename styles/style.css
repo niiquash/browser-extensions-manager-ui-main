@@ -95,7 +95,8 @@ main {
 /* Main cards */
 .card-items {
   display: grid;
-  grid-template-columns: 1fr;
+  gap: 12px;
+  grid-template-columns: repeat(1, 1fr);
   margin-top: 40px;
 }
 
@@ -107,6 +108,8 @@ main {
   flex-direction: column;
   justify-content: space-between;
   gap: 24px;
+  max-width: 343px;
+  margin: 0 auto;
 }
 
 .image-details-container {
