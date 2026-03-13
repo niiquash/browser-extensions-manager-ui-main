@@ -219,3 +219,19 @@ main {
     width: 346px;
   }
 }
+
+@media (min-width: 1440px) {
+  body {
+    padding: 40px 135px 64px 135px;
+  }
+
+  /* Main - Heading and links */
+  .card-items {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1170px;
+  }
+
+  .card-item {
+    width: 382px;
+  }
+}
