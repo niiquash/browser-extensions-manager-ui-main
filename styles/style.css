@@ -58,6 +58,7 @@ main {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
+  margin-bottom: 40px;
 }
 
 .heading {
@@ -84,7 +85,7 @@ main {
   font-weight: 500;
   line-height: 140%;
   letter-spacing: -0.3px;
-  box-shadow: 0 4px 4px #000 25%;
+  box-shadow: 0 1px 2px rgb(184, 196, 215, 0.4);
 }
 
 .nav-item.focus {
@@ -95,9 +96,10 @@ main {
 /* Main cards */
 .card-items {
   display: grid;
+  place-items: center;
   gap: 12px;
-  grid-template-columns: repeat(1, 1fr);
-  margin-top: 40px;
+  grid-template-columns: auto;
+  margin: 0 auto;
 }
 
 .card-item {
@@ -108,8 +110,9 @@ main {
   flex-direction: column;
   justify-content: space-between;
   gap: 24px;
-  max-width: 343px;
-  margin: 0 auto;
+  width: 343px;
+  height: 200px;
+  box-shadow: 0 2px 2px 0 rgb(194, 206, 225, 0.5);
 }
 
 .image-details-container {
@@ -169,6 +172,7 @@ main {
   height: 20px;
   background-color: #c6c6c6;
   border-radius: 28px;
+
   transition: background-color 0.08s ease;
 }
 
@@ -182,7 +186,7 @@ main {
   background-color: #fbfdfe;
   border-radius: 50%;
   transition: transform 0.08s ease;
-  box-shadow: 0 1px 3px #0a0d12 15%;
+  box-shadow: 0 1px 3px #0a0d12;
 }
 
 /* Checked toggle states */
@@ -192,4 +196,26 @@ main {
 
 .toggle input:checked + .toggle-track::before {
   transform: translateX(16px);
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  body {
+    padding: 24px 32px 64px 32px;
+  }
+
+  /* Main - Heading and links */
+  .heading-nav-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .card-items {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 705px;
+  }
+
+  .card-item {
+    width: 346px;
+  }
 }
