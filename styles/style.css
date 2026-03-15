@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #eef4ff;
+  background: linear-gradient(#ebf2fc, #eefbf9);
   font-family: "Noto Sans", sans-serif;
   padding: 20px 16px 64px 16px;
 }
@@ -45,6 +45,11 @@ header {
   height: 50px;
   border-radius: 12px;
   cursor: pointer;
+  transition: background-color 0.1s ease;
+}
+
+.theme-button:hover {
+  background-color: #c6c6c6;
 }
 
 /* Main - Heading and links */
@@ -85,11 +90,21 @@ main {
   line-height: 140%;
   letter-spacing: -0.3px;
   box-shadow: 0 1px 2px rgb(184, 196, 215, 0.4);
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  opacity: 70%;
 }
 
 .nav-item.focus {
   background-color: #c7231a;
   color: #fbfdfe;
+}
+
+.nav-item.focus:hover {
+  opacity: 100%;
+  background-color: #de4840;
 }
 
 /* Main cards */
@@ -152,6 +167,11 @@ main {
   cursor: pointer;
 }
 
+.remove-button:hover {
+  background-color: #c7231a;
+  color: #d6e2f5;
+}
+
 /* Toggle button */
 .toggle {
   position: relative;
@@ -191,6 +211,10 @@ main {
 /* Checked toggle states */
 .toggle input:checked + .toggle-track {
   background-color: #c7231a;
+}
+
+.toggle input:checked + .toggle-track:hover {
+  background-color: #de4840;
 }
 
 .toggle input:checked + .toggle-track::before {
